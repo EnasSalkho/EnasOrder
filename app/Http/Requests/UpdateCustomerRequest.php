@@ -23,7 +23,7 @@ class UpdateCustomerRequest extends FormRequest
     {
         return [
             'name' => 'sometimes|string',
-            'phone' => 'sometimes|string|unique:customers,phone'. $this->customer->id,
+            'phone' => 'sometimes|string|unique:customers,phone,'. $this->customer->id,
         ];
     }
 }

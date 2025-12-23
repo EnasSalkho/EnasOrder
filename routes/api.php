@@ -6,8 +6,9 @@ use App\Http\Controllers\OrderItemController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::resource('customers', CustomerController::class);
+
 Route::get('/customers/trashed', [CustomerController::class, 'trashed']);
+Route::resource('customers', CustomerController::class);
 Route::post('/customers/{id}/restore', [CustomerController::class, 'restore']);
 Route::delete('/customers/{id}/force', [CustomerController::class, 'forceDelete']);
 
